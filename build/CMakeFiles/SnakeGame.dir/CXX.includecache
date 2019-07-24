@@ -6,21 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/controller.cpp
-controller.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/controller.h
+/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.cpp
+agent.h
+/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.h
 iostream
+-
+
+/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.h
+random
 -
 vector
 -
 SDL.h
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/SDL.h
-
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/controller.h
-snake.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/snake.h
 fields.h
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/fields.h
+
+/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/controller.cpp
+controller.h
+/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/controller.h
+iostream
+-
+SDL.h
+/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/SDL.h
+
+/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/controller.h
+agent.h
+/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.h
 
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/fields.h
 vector
@@ -39,16 +51,14 @@ cmath
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/game.h
 vector
 -
-random
--
 SDL.h
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/SDL.h
 controller.h
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/controller.h
 renderer.h
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/renderer.h
-snake.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/snake.h
+agent.h
+/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.h
 fields.h
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/fields.h
 
@@ -69,30 +79,14 @@ iostream
 -
 string
 -
-fields.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/fields.h
 
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/renderer.h
 vector
 -
 SDL.h
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/SDL.h
-snake.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/snake.h
-fields.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/fields.h
-
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/snake.cpp
-snake.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/snake.h
-iostream
--
-
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/snake.h
-vector
--
-SDL.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/SDL.h
+agent.h
+/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.h
 fields.h
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/fields.h
 

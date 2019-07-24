@@ -109,18 +109,18 @@ CMakeFiles/SnakeGame.dir/src/renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SnakeGame.dir/src/renderer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/renderer.cpp -o CMakeFiles/SnakeGame.dir/src/renderer.cpp.s
 
-CMakeFiles/SnakeGame.dir/src/snake.cpp.o: CMakeFiles/SnakeGame.dir/flags.make
-CMakeFiles/SnakeGame.dir/src/snake.cpp.o: ../src/snake.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SnakeGame.dir/src/snake.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SnakeGame.dir/src/snake.cpp.o -c /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/snake.cpp
+CMakeFiles/SnakeGame.dir/src/agent.cpp.o: CMakeFiles/SnakeGame.dir/flags.make
+CMakeFiles/SnakeGame.dir/src/agent.cpp.o: ../src/agent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SnakeGame.dir/src/agent.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SnakeGame.dir/src/agent.cpp.o -c /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.cpp
 
-CMakeFiles/SnakeGame.dir/src/snake.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SnakeGame.dir/src/snake.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/snake.cpp > CMakeFiles/SnakeGame.dir/src/snake.cpp.i
+CMakeFiles/SnakeGame.dir/src/agent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SnakeGame.dir/src/agent.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.cpp > CMakeFiles/SnakeGame.dir/src/agent.cpp.i
 
-CMakeFiles/SnakeGame.dir/src/snake.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SnakeGame.dir/src/snake.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/snake.cpp -o CMakeFiles/SnakeGame.dir/src/snake.cpp.s
+CMakeFiles/SnakeGame.dir/src/agent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SnakeGame.dir/src/agent.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.cpp -o CMakeFiles/SnakeGame.dir/src/agent.cpp.s
 
 # Object files for target SnakeGame
 SnakeGame_OBJECTS = \
@@ -128,7 +128,7 @@ SnakeGame_OBJECTS = \
 "CMakeFiles/SnakeGame.dir/src/game.cpp.o" \
 "CMakeFiles/SnakeGame.dir/src/controller.cpp.o" \
 "CMakeFiles/SnakeGame.dir/src/renderer.cpp.o" \
-"CMakeFiles/SnakeGame.dir/src/snake.cpp.o"
+"CMakeFiles/SnakeGame.dir/src/agent.cpp.o"
 
 # External object files for target SnakeGame
 SnakeGame_EXTERNAL_OBJECTS =
@@ -137,7 +137,7 @@ SnakeGame: CMakeFiles/SnakeGame.dir/src/main.cpp.o
 SnakeGame: CMakeFiles/SnakeGame.dir/src/game.cpp.o
 SnakeGame: CMakeFiles/SnakeGame.dir/src/controller.cpp.o
 SnakeGame: CMakeFiles/SnakeGame.dir/src/renderer.cpp.o
-SnakeGame: CMakeFiles/SnakeGame.dir/src/snake.cpp.o
+SnakeGame: CMakeFiles/SnakeGame.dir/src/agent.cpp.o
 SnakeGame: CMakeFiles/SnakeGame.dir/build.make
 SnakeGame: CMakeFiles/SnakeGame.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable SnakeGame"
