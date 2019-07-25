@@ -177,6 +177,33 @@ src/controller.cpp.s:
 	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/controller.cpp.s
 .PHONY : src/controller.cpp.s
 
+src/fields.o: src/fields.cpp.o
+
+.PHONY : src/fields.o
+
+# target to build an object file
+src/fields.cpp.o:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/fields.cpp.o
+.PHONY : src/fields.cpp.o
+
+src/fields.i: src/fields.cpp.i
+
+.PHONY : src/fields.i
+
+# target to preprocess a source file
+src/fields.cpp.i:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/fields.cpp.i
+.PHONY : src/fields.cpp.i
+
+src/fields.s: src/fields.cpp.s
+
+.PHONY : src/fields.s
+
+# target to generate assembly for a file
+src/fields.cpp.s:
+	$(MAKE) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/fields.cpp.s
+.PHONY : src/fields.cpp.s
+
 src/game.o: src/game.cpp.o
 
 .PHONY : src/game.o
@@ -273,6 +300,9 @@ help:
 	@echo "... src/controller.o"
 	@echo "... src/controller.i"
 	@echo "... src/controller.s"
+	@echo "... src/fields.o"
+	@echo "... src/fields.i"
+	@echo "... src/fields.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"

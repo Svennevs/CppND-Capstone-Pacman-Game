@@ -100,6 +100,9 @@ CMakeFiles/SnakeGame.dir/src/controller.cpp.o: /usr/include/SDL2/SDL_video.h
 CMakeFiles/SnakeGame.dir/src/controller.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/SnakeGame.dir/src/controller.cpp.o: /usr/include/SDL2/close_code.h
 
+CMakeFiles/SnakeGame.dir/src/fields.cpp.o: ../src/fields.cpp
+CMakeFiles/SnakeGame.dir/src/fields.cpp.o: ../src/fields.h
+
 CMakeFiles/SnakeGame.dir/src/game.cpp.o: ../src/agent.h
 CMakeFiles/SnakeGame.dir/src/game.cpp.o: ../src/controller.h
 CMakeFiles/SnakeGame.dir/src/game.cpp.o: ../src/fields.h
