@@ -3,14 +3,19 @@
 #include "SDL.h"
 #include <cmath>
 
-Game::Game(std::size_t grid_width, std::size_t grid_height)
-    : snake(grid_width, grid_height),
-      fields(grid_width, grid_height),
-      engine(dev()),
-      random_w(0, static_cast<int>(grid_width)),
-      random_h(0, static_cast<int>(grid_height)) {
-  //PlaceFood();
-}
+Game::Game(std::string filename_map)
+    : fields(filename_map), 
+      pacman(fields, 4, 4),
+      monster1(fields,pacman, 10,8),
+      monster2(fields,pacman, 10,10),
+      monster3(fields,pacman, 10,16),
+      monster4(fields,pacman, 10,18) {
+        Monster::MonsterContainer.push_back(&monster1);
+        Monster::MonsterContainer.push_back(&monster2);
+        Monster::MonsterContainer.push_back(&monster3);
+        Monster::MonsterContainer.push_back(&monster4);
+      }
+
 
 void Game::Run(Controller const &controller, Renderer &renderer,
                std::size_t target_frame_duration) {
@@ -25,9 +30,9 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     frame_start = SDL_GetTicks();
 
     // Input, Update, Render - the main game loop.
-    controller.HandleInput(running, snake, fields);
+    controller.HandleInput(running, pacman); // can remove fields
     Update();
-    renderer.Render(snake, food, fields );
+    renderer.Render(pacman, food, fields );
 
     frame_end = SDL_GetTicks();
 
@@ -52,57 +57,31 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   }
 }
 
-/*
-void Game::PlaceFood(std::vector<std::vector<Fields::FieldType>> const &fieldtypes) {
-  int x, y;
-  for(std::vector<Fields::FieldType> &vec : fieldtypes){
-    for(Fields::FieldType & ftype : vec){
-      if(ftype == Fields::FieldType::Path){
-        foo
-      }
-    }
-  }
-  
-  while (true) {
-    
-    x = random_w(engine);
-    y = random_h(engine);
-    // Check that the location is not occupied by a snake item before placing
-    // food.
-    if (!snake.SnakeCell(x, y)) {
-      food.x = x;
-      food.y = y;
-      return;
-    }
-  }
-}
-*/
+
 
 void Game::Update() {
-  if (!snake.alive || fields.getFoodLeft()==0) return;
+  if (!pacman.isAlive() || fields.getFoodLeft()==0) return;
 
-  snake.Update(fields); 
+  pacman.Update();
+  for (Monster * monster : Monster::MonsterContainer){
+    
+    monster->Update(); //update monster
 
-  int new_x = static_cast<int>(snake.head_x);
-  int new_y = static_cast<int>(snake.head_y);
+    //check if monster kills pacman
+    if (pacman.getPosX() == monster->getPosX() && pacman.getPosY() == monster->getPosY()){
+      pacman.die();
+      return;
+    }
 
-  // Check if there's food over here 
-  if(fields.hasFood(new_x,new_y)){
-    score++; //can remove score (or base it on time or so)
-    fields.eatFood(new_x,new_y);
   }
   
-  /*
-  if (food.x == new_x && food.y == new_y) {
-    score++;
-    // PlaceFood();
-    // Grow snake and increase speed.
-    snake.GrowBody();
-    snake.speed += 0.02;
-  }
-  */
+  // Check if there's food over here 
+  if(fields.eatFood(pacman.getPosX() , pacman.getPosY()))
+    score++; //can remove score (or base it on time or so)
+  
+  
+
 }
 
 int Game::GetScore() const { return score; }
-int Game::GetSize() const { return snake.size; }
 

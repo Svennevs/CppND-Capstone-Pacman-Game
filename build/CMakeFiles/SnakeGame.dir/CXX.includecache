@@ -6,29 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.cpp
-agent.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.h
-iostream
--
-
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.h
 random
 -
 vector
 -
+list
+-
+cmath
+-
+map
+-
 SDL.h
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/SDL.h
 fields.h
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/fields.h
-
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/controller.cpp
-controller.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/controller.h
-iostream
--
-SDL.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/SDL.h
 
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/controller.h
 agent.h
@@ -61,24 +53,6 @@ agent.h
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/agent.h
 fields.h
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/fields.h
-
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/main.cpp
-iostream
--
-controller.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/controller.h
-game.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/game.h
-renderer.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/renderer.h
-
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/renderer.cpp
-renderer.h
-/home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/renderer.h
-iostream
--
-string
--
 
 /home/osboxes/Documents/codeExample/CppND-Capstone-Snake-Game/src/renderer.h
 vector

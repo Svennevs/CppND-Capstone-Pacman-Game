@@ -9,7 +9,10 @@ class Fields {
     enum class FieldType { Wall, PathEmpty , PathFood };
 
 
-    Fields(int grid_width, int grid_height){
+    Fields(std::string filename_map){
+      
+      grid_width = 20;
+      grid_height = 20;
 
       foodLeft=0;
       std::vector<std::vector<FieldType>> temp(grid_width, std::vector<FieldType>(grid_height));
@@ -29,15 +32,15 @@ class Fields {
       std::vector<int> yCoordinates;//{10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10};
       
       //vertical line paths
-      std::vector<int> xVertLines{3,6,11,18};
+      std::vector<int> xVertLines{ 10};
       for(int x : xVertLines){
-        for(int y = 0; y < grid_height ;y++){
+        for(int y = 4; y < grid_height ;y++){
           xCoordinates.push_back(x);
           yCoordinates.push_back(y);
         }
       }
       //horizontal line paths
-      std::vector<int> yHorLines{1,4,8,12,14,19};
+      std::vector<int> yHorLines{ 4, 8};
       for(int y : yHorLines){
         for(int x = 0; x < grid_width ;x++){
           xCoordinates.push_back(x);
@@ -66,7 +69,9 @@ class Fields {
       //return walls;
       //}
     
-    std::vector<std::vector<FieldType>> getTypes(){
+    int getGrid_width() const {return grid_width;}
+    int getGrid_height() const {return grid_height;}
+    std::vector<std::vector<FieldType>> getTypes() const{
       return ftypes;
     }
     /*
@@ -82,15 +87,21 @@ class Fields {
 
     int getFoodLeft() const {return foodLeft;}
 
-    void eatFood(int x, int y){
-      ftypes[x][y]=FieldType::PathEmpty;
-      foodLeft--;
+    bool eatFood(int x, int y){
+      if (hasFood(x,y)){
+        ftypes[x][y]=FieldType::PathEmpty;
+        foodLeft--;
+        return true;
+      }
+      return false;
     }
 
-
+      
   private:
     std::vector<std::vector<FieldType>> ftypes; 
     int foodLeft;
+    int grid_width;
+    int grid_height; 
 };
 
 
