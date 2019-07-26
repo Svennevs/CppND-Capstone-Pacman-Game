@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/Pacman.dir/src/main.cpp.o CMakeFiles/Pacman.dir/src/game.cpp.o CMakeFiles/Pacman.dir/src/controller.cpp.o CMakeFiles/Pacman.dir/src/renderer.cpp.o CMakeFiles/Pacman.dir/src/agent.cpp.o CMakeFiles/Pacman.dir/src/fields.cpp.o  -o Pacman -lSDL2 

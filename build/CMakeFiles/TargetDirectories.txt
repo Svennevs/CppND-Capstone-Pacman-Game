@@ -1,3 +1,0 @@
-/home/osboxes/Documents/codeExample/CppND-Capstone-Pacman-Game/build/CMakeFiles/rebuild_cache.dir
-/home/osboxes/Documents/codeExample/CppND-Capstone-Pacman-Game/build/CMakeFiles/Pacman.dir
-/home/osboxes/Documents/codeExample/CppND-Capstone-Pacman-Game/build/CMakeFiles/edit_cache.dir
