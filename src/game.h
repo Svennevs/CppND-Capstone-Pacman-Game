@@ -2,12 +2,14 @@
 #define GAME_H
 
 #include <vector>
-//#include <random>
+#include <iostream>
+#include <cmath>
 #include "SDL.h"
 #include "controller.h"
 #include "renderer.h"
 #include "agent.h"
 #include "fields.h"
+
 
 class Game {
  public:
@@ -16,25 +18,24 @@ class Game {
   void Run(Controller const &controller, Renderer &renderer,
            std::size_t target_frame_duration);
   int GetScore() const;
-  //int GetSize() const;
 
  private:
   Pacman pacman;
-  Monster monster1;
-  Monster monster2;
-  Monster monster3;
-  Monster monster4;
+  Blinky blinky;
+  Pinky pinky;
+  Inky inky;
+  Clyde clyde;
+  
   Fields fields;
 
-  SDL_Point food;
-  //std::vector<SDL_Point> walls;
-
-  //std::uniform_int_distribution<int> random_w;
-  //std::uniform_int_distribution<int> random_h;
+  Uint32 durationChase       = 18000;
+  Uint32 durationScatter     = 7000;
+  Uint32 durationFrightened  = 5000;
+  Uint32 switchInterval      = 14000;
+  Uint32 lastSwitchTimeStamp;
 
   int score{0};
 
-  //void PlaceFood();
   void Update();
 };
 

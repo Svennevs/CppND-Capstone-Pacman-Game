@@ -35,7 +35,7 @@ Renderer::~Renderer() {
   SDL_Quit();
 }
 
-void Renderer::Render(Pacman const pacman, SDL_Point const &food, Fields const &fields) {
+void Renderer::Render(Pacman const pacman, Fields const &fields) {
   SDL_Rect block;
   block.w = screen_width / fields.getGrid_width();
   block.h = screen_height / fields.getGrid_height();
@@ -47,25 +47,30 @@ void Renderer::Render(Pacman const pacman, SDL_Point const &food, Fields const &
   // Render walls and food
   for(int x=0;x<fields.getGrid_width();x++){
     for(int y=0;y<fields.getGrid_height();y++){
-      if(fields.isWall(x,y)){
-        SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xFF, 0x00, 0xFF);
+      if(fields.isWall(y,x)){
+        SDL_SetRenderDrawColor(sdl_renderer, 50, 50, 50, 0);
         block.x = x * block.w;
         block.y = y * block.h;
-        SDL_RenderDrawRect(sdl_renderer, &block);
-      } else if (fields.hasFood(x,y)){
-        SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+        SDL_RenderFillRect(sdl_renderer, &block);
+      } else if (fields.hasFood(y,x)){
+        SDL_SetRenderDrawColor(sdl_renderer, 100, 100, 0, 0);
         block.x = x * block.w;
         block.y = y * block.h;
-        SDL_RenderFillRect(sdl_renderer, &block);         
+        SDL_RenderFillRect(sdl_renderer, &block);
+      } else if (fields.hasPowerUp(y,x)){
+        SDL_SetRenderDrawColor(sdl_renderer, 255, 100, 0, 0);
+        block.x = x * block.w;
+        block.y = y * block.h;
+        SDL_RenderFillRect(sdl_renderer, &block);                 
       }
     }
   }
   
-  // Render monster (replace by loop)
+  // Render monsters
   for (Monster * monster : Monster::MonsterContainer){
     block.x = monster->getPosX() * block.w;
     block.y = monster->getPosY() * block.h;
-    SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
+    SDL_SetRenderDrawColor(sdl_renderer, monster->getColorValueR(), monster->getColorValueG(), monster->getColorValueB(), 150);
     SDL_RenderFillRect(sdl_renderer, &block);
   }
 
@@ -73,9 +78,9 @@ void Renderer::Render(Pacman const pacman, SDL_Point const &food, Fields const &
   block.x = pacman.getPosX() * block.w;
   block.y = pacman.getPosY() * block.h;
   if (pacman.isAlive()) {
-    SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);
+    SDL_SetRenderDrawColor(sdl_renderer, 255, 255, 0, 0);
   } else {
-    SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
+    SDL_SetRenderDrawColor(sdl_renderer, 50, 0, 0, 0);
   }
   SDL_RenderFillRect(sdl_renderer, &block);
 
@@ -83,7 +88,7 @@ void Renderer::Render(Pacman const pacman, SDL_Point const &food, Fields const &
   SDL_RenderPresent(sdl_renderer);
 }
 
-void Renderer::UpdateWindowTitle(int foodLeft, int fps) {
-  std::string title{"Food left: " + std::to_string(foodLeft) + " FPS: " + std::to_string(fps)};
+void Renderer::UpdateWindowTitle(int foodLeft, int fps, int lives) {
+  std::string title{"Food left: " + std::to_string(foodLeft) + " FPS: " + std::to_string(fps) + " Lives left: " + std::to_string(lives) };
   SDL_SetWindowTitle(sdl_window, title.c_str());
 }
