@@ -20,7 +20,7 @@ The main source for especially ghost behaviour was this (https://gameinternals.c
 Operation is through the arrow keys on the keybard. There is one level and pacman has 3 lives to complete it. Take care, there is no break after losing a life.
 
 ## Code structure
-The code was based on the snakeGame example.The game loop structured of this example was kept intact.
+The code was based on the snakeGame example.The game loop of this example was kept intact.
 * the snake class was replaced by an Agent class, with derived classes Pacman and Monster
 * the monster class has derived classes Blinky, Pinky, Inky and Clyde
 * a fields class was added. This loads the map (level1.map) from the data folder. It is used by the Game,Agent and Renderer class
