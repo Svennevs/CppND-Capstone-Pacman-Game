@@ -17,7 +17,7 @@ The main source for especially ghost behaviour was this (https://gameinternals.c
 3. Compile: `cmake .. && make`
 4. Run it: `./Pacman`.
 
-Operation is through the arrow keys on the keybard. There is one level and pacman has 3 lives to complete it. Take care, there is no break after loosing a life.
+Operation is through the arrow keys on the keybard. There is one level and pacman has 3 lives to complete it. Take care, there is no break after losing a life.
 
 # Code structure
 The code was based on the snakeGame example.The game loop structured of this example was kept intact.
