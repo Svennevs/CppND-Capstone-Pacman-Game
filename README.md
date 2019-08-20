@@ -16,6 +16,8 @@ The code was based on the snakeGame example. The game loop of this example was k
 * the monster class has derived classes Blinky, Pinky, Inky and Clyde
 * a fields class was added. This loads the map (level1.map) from the data folder. It is used by the Game,Agent and Renderer class
 
+The code for the original repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+
 ## Dependencies for Running Locally
 * cmake >= 3.7
   * All OSes: [click here for installation instructions](https://cmake.org/install/)
@@ -31,20 +33,7 @@ The code was based on the snakeGame example. The game loop of this example was k
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
   * Windows: recommend using [MinGW](http://www.mingw.org/)
 
-## Rubric satisfaction
-* The project demonstrates an understanding of C++ functions and control structures  (I have tried to organise the project into functions)
-* The project reads data from a file and process the data, or the program writes data to a file (it reads the map from ./data/level1.map)
-* The project uses Object Oriented Programming techniques (I made some classes, like Agent, Pacman, Monster, Fields)
-* Classes use appropriate access specifiers for class members (I tried to, please see agents.h and agent.cpp)
-* Class constructors utilize member initialization lists (for example the Agent class)
-* Classes abstract implementation details from their interfaces (I tried to, please see agents and game)
-* Classes encapsulate behavior (worked with getters and setters)
-* Classes follow an appropriate inheritance hierarchy (Agent -> Pacman or Monsters -> Blinky/Pinky/Inky/Clyde. I specified override functions)
-* Derived class functions override virtual base class functions.
-* Templates generalize functions in the project (please see Wrap function in Agent.cpp)
-* The project makes use of references in function declarations (reference to field object in Agent and Renderer)
 
-The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
 
 
 
