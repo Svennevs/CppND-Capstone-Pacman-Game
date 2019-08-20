@@ -1,6 +1,5 @@
 ## Summary
-This version of the game Pacman was my final project submission for the Udacity C++ Nanodegree. It has most relevant features of the original game, but some details were omitted to keep it simple.
-The main source for the game rules was this: https://gameinternals.com/post/2072558330/understanding-pac-man-ghost-behavior. The four different ghost characters (Blinky, Pinky, Inky, Clyde) are included. Rendering is basic: all elements are squared blocks. 
+This version of the game Pacman was my final project submission for the Udacity C++ Nanodegree. It has most relevant features of the original game. The main source for the game rules was [this](https://gameinternals.com/post/2072558330/understanding-pac-man-ghost-behavior). The four different ghost characters (Blinky, Pinky, Inky, Clyde) are included. Rendering is basic: all elements are squared blocks. 
 * Pacman is yellow
 * Empty paths are black
 * Paths with food are dark yellow
