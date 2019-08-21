@@ -10,12 +10,12 @@ This version of the game Pacman was my final project submission for the Udacity 
 Operation is through the arrow keys on the keybard. There is one level and pacman has 3 lives to complete it. Careful, there is no break after losing a life.
 
 ## Code structure
-The code was based on the snakeGame example. The game loop of this example was kept intact.
+The code was based on a snakeGame example. The game loop of this example was kept intact.
 * the snake class was replaced by an Agent class, with derived classes Pacman and Monster
 * the monster class has derived classes Blinky, Pinky, Inky and Clyde
 * a fields class was added. This loads the map (level1.map) from the data folder. It is used by the Game,Agent and Renderer class
 
-The code for the original repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+The code for the [original repo](https://github.com/udacity/CppND-Capstone-Snake-Game/blob/master/CMakeLists.txt) was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) StackOverflow post and set of responses.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
